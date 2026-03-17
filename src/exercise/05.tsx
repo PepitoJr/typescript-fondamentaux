@@ -18,9 +18,12 @@ const exercice = () => {
   // avec displayText affiche 'Bonjour Mr' en utilisant civility
   displayText(`Bonjour ${civility}`)
   // 🐶 Déclare une variable `uploadSize` et un type `maxUploadSize` avec comme valeur possible 2048 ou 4096
+  type maxUploadSize = 2048 | 4096
+  let uploadSize: maxUploadSize = 2048
   // avec displayText affiche 'Upload size 2048' en utilisant uploadSize
-
+  displayText(`Upload size ${uploadSize}`)
   // 🐶 Déclare un Enum  `HttpStatusCode` et code toutes les valeurs demandées par 👨‍✈️ Hugo
+  enum HttpStatusCode {}
   // 📝 documentation declaration Enum https://www.typescriptlang.org/docs/handbook/enums.html
   // Créér une variable `httpResponse` et initialise la avec la valeur '400' sans utliser de Magic String
   // avec displayText affiche 'Reponse du serveur 400' en utilisant httpResponse
