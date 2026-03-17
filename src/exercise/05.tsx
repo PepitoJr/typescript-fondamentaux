@@ -23,15 +23,30 @@ const exercice = () => {
   // avec displayText affiche 'Upload size 2048' en utilisant uploadSize
   displayText(`Upload size ${uploadSize}`)
   // 🐶 Déclare un Enum  `HttpStatusCode` et code toutes les valeurs demandées par 👨‍✈️ Hugo
-  enum HttpStatusCode {}
+  enum HttpStatusCode {
+    CONTINUE = 100,
+    OK = 200,
+    MOVED_PERMANENTLY = 301,
+    BAD_REQUEST = 400,
+    UNAUTHORIZED = 403,
+    NOT_FOUND = 404,
+    INTERNAL_SERVER_ERROR = 500,
+  }
   // 📝 documentation declaration Enum https://www.typescriptlang.org/docs/handbook/enums.html
   // Créér une variable `httpResponse` et initialise la avec la valeur '400' sans utliser de Magic String
+  let httpResponse: HttpStatusCode = HttpStatusCode.BAD_REQUEST
   // avec displayText affiche 'Reponse du serveur 400' en utilisant httpResponse
-
+  displayText(`Reponse du serveur ${httpResponse}`)
   // 🐶 Déclare un Enum  `TransfertMessage` et code toutes les valeurs demandées par 👨‍✈️ Hugo
+  enum TransfertMessage {
+    SUCCESS = "Transfert avec succès",
+    ERROR = "Erreur durant le transfert",
+    RESTART = "Recommencez le transfert",
+  }
   // Créér une variable `message` et initialise la avec la valeur 'Transfert avec succès' sans utliser de Magic String
+  let message: TransfertMessage = TransfertMessage.SUCCESS
   // avec displayText affiche 'Message : Transfert avec succès' en utilisant `message`
-
+  displayText(`Message: ${message}`)
   /*
 eslint
   @typescript-eslint/no-unused-vars: "off"
