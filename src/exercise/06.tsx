@@ -9,9 +9,14 @@ const exercice = () => {
   init()
 
   // ✔️ Début de l'exercice
-
+  //BONUS
+  enum Protocol {
+    HTTP = "http",
+    HTTPS = "https",
+    FTP = "ftp",
+  }
   // 🐶 Déclare un type `Connexion` un tuple contennant toutes les informations utile a la connexion
-  type Connexion = [string, string, string, number, string, string]
+  type Connexion = [string, Protocol, string, number, string, string]
   // - le nom de la connexion  (ex : Connexion à Google) `string`
   // - le protocole (ex : ftp, http) `string`
   // - le hostname (ex : google.com) `string`
@@ -25,12 +30,13 @@ const exercice = () => {
   // 🐶 Créer une variable 'google' qui contiendra les infos de connexion à google
   let google: Connexion = [
     "Google",
-    "http",
+    Protocol.HTTP,
     "google.com",
     8080,
     "admin",
     "admin",
   ]
+
   // https google.com 443
   // Affiche le resultat à l'ecran avec le code
   // 🤖 displayText(`Connexion ${google[0]} : ${google[1]}://${google[2]}:${google[3]} `)
@@ -41,7 +47,7 @@ const exercice = () => {
 
   let pinterest: Connexion = [
     "pinterest",
-    "http",
+    Protocol.HTTPS,
     "pinterest.com",
     7015,
     "guest",
@@ -49,7 +55,7 @@ const exercice = () => {
   ]
   let facebook: Connexion = [
     "facebook",
-    "http",
+    Protocol.FTP,
     "facebook.com",
     243,
     "guest",
@@ -57,7 +63,7 @@ const exercice = () => {
   ]
   let youtube: Connexion = [
     "youtube",
-    "http",
+    Protocol.HTTPS,
     "youtube.com",
     403,
     "guest",
@@ -79,6 +85,7 @@ const exercice = () => {
   // Ajoute des connexion via l'initialisation et via la méthode `push`
   connexions.push(google, pinterest, youtube)
   displayText(`il ya ${connexions.length} Connexions`)
+
   /*
 eslint
   @typescript-eslint/no-unused-vars: "off"
