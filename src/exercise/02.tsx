@@ -19,7 +19,7 @@ const exercice = () => {
   // 🤖 affiche 'Il y a 2 noms' dans le navigateur grace à `displayText` et `.length`
   displayText(`Il y'a ${names.length} noms`)
   // 🐶 Créer une constante `games` et initialise avec un tableau vide
-  const games: string[] = []
+  let games: string[] = []
   // avec la méthode `push()` ajoute 3 jeux
   games.push("soccer", "basket-Ball", "handball")
   // ⛏️ const games
@@ -28,7 +28,7 @@ const exercice = () => {
 
   // 🐶 Créer une constante `things` : un tableau qui peut prendre n'importe quel type de donnée
 
-  const things: any[] = []
+  let things: any[] = []
 
   // ⛏️ const things
   things.push("yop", 2, true, false)
