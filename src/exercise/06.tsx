@@ -86,6 +86,11 @@ const exercice = () => {
   connexions.push(google, pinterest, youtube)
   displayText(`il ya ${connexions.length} Connexions`)
 
+  //Bonus 2 (destructuration)
+  let [, protocolYtb, hostNameYtb] = youtube
+  displayText(
+    `Le protocol de youtube est ${protocolYtb} et son HostName: ${hostNameYtb} `
+  )
   /*
 eslint
   @typescript-eslint/no-unused-vars: "off"
