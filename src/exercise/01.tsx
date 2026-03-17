@@ -21,15 +21,17 @@ const exercice = () => {
     return `Hello ${name}`
   }
 
-  //ici je l'affiche en utilisant la fonction displayText
-  displayText(sayHello("Mike"))
   // ⛏️ Décommente pour afficher le résultat de la fonction à l'écran
-  // displayText(`${sayHello('Mike')}`)
+  displayText(`${sayHello("Mike")}`)
 
   // 🐶 Créer une fonction `sum` qui retourne la somme de 2 nombres passés en argument
   // Affiche le resultat à l'écran avec `displayText`
-  function sum() {}
 
+  function sum(nbr1: number, nbr2: number) {
+    return nbr1 + nbr2
+  }
+
+  displayText(`${sum(4.5, 5)}`)
   // 🐶 Créer une fonction `printGender` qui retourne 'Monsieur' ou 'Madame' en fonction d'un argument `isMale`
   function printGender() {
     return "Monsieur"
