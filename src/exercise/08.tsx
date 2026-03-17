@@ -33,6 +33,22 @@ const exercice = () => {
 
   // 🚀 N'oublie pas les bonus
 
+  //creation de la fonction callback
+  let callback: (nombre: number, puissance?: number) => number
+  callback = (nombre: number, puissance?: number) => {
+    return Math.pow(nombre, puissance || 1)
+  }
+
+  displayText(`${callback(4, 5)}`)
+  //creation de la fonction carre
+  let carre: (nbr: number) => number
+  carre = (nbr: number) => nbr * nbr
+
+  // creation de la fonction calculExp
+  let calculExp: (cb: (nbr: number) => number, base: number) => number
+  calculExp = (cb: (nbr: number) => number, base: number) => cb(base)
+
+  displayText(`${calculExp(carre, 5)}`)
   /*
 eslint
   @typescript-eslint/no-unused-vars: "off"
