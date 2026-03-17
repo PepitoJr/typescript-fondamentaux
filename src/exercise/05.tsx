@@ -47,6 +47,22 @@ const exercice = () => {
   let message: TransfertMessage = TransfertMessage.SUCCESS
   // avec displayText affiche 'Message : Transfert avec succès' en utilisant `message`
   displayText(`Message: ${message}`)
+
+  //declaratin d'un enum qui contiendra les notes allant de 1 a 5
+  /*L'incrementation c'est fait ici autmatiquement.pour ce faire il faut juste donner la valeur 
+    au 1er element tout le reste se fera automatiquement
+   */
+  enum Note {
+    NOTE_1 = 1,
+    NOTE_2,
+    NOTE_3,
+    NOTE_4,
+    NOTE_5,
+    NSP = "souhaite pas se prononcer",
+  }
+  //affichage de la note 3
+  displayText(`La numero 3 est egale: ${Note.NOTE_3}`)
+  displayText(`Note: ${Note.NSP}`)
   /*
 eslint
   @typescript-eslint/no-unused-vars: "off"
