@@ -27,10 +27,13 @@ const exercice = () => {
   displayText(` il ya ${games.length} jeux dans le tableau`)
 
   // 🐶 Créer une constante `things` : un tableau qui peut prendre n'importe quel type de donnée
+
+  const things: any[] = []
+
   // ⛏️ const things
-
+  things.push("yop", 2, true, false)
   // 🤖 affiche le nombre d'élément à l'ecran
-
+  displayText(`Il ya ${things.length} dans ce tableau things`)
   /*
 eslint
   @typescript-eslint/no-unused-vars: "off"
