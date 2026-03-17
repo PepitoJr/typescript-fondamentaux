@@ -33,8 +33,10 @@ const exercice = () => {
 
   displayText(`${sum(4.5, 5)}`)
   // 🐶 Créer une fonction `printGender` qui retourne 'Monsieur' ou 'Madame' en fonction d'un argument `isMale`
-  function printGender() {
-    return "Monsieur"
+  function printGender(isMale: boolean) {
+    return isMale ? "Monsieur" : "Madame"
   }
+
+  displayText(`${printGender(true)}`)
 }
 export default () => <App exercice={exercice} />
