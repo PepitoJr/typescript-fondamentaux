@@ -28,6 +28,14 @@ const exercice = () => {
     roles: string[]
     params: {}
     payload: any
+    friend: {
+      name: string
+      age: number
+      isActive: boolean
+      roles: string[]
+      params: {}
+      payload: any
+    }
   }
 
   // 🐶 affecte des valeurs à person
@@ -39,11 +47,20 @@ const exercice = () => {
     roles: ["ADMIN"],
     params: {},
     payload: undefined,
+    friend: {
+      name: "Mike",
+      age: 30,
+      isActive: true,
+      roles: ["ADMIN"],
+      params: { id: "51" },
+      payload: undefined,
+    },
   }
 
   // 🤖 Affiche dans le navigateur grace à `displayText` le libellé suivant
   // 'John à 30 ans et a le role ADMIN'
   displayText(`${person.name} a ${person.age} ans et a le role ${person.roles}`)
+  displayText(`${person.name} a pour ami ${person.friend.name}`)
   /*
 eslint
   @typescript-eslint/no-unused-vars: "off"
