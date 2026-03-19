@@ -33,6 +33,13 @@ const exercice = () => {
 
   // 🚀 N'oublie pas les bonus
 
+  //bonus 2
+
+  type CalculExpFunction = {
+    description: string;
+    (nbr: number): number
+  }
+
   //creation de la fonction callback
   let callback: (nombre: number, puissance?: number) => number
   callback = (nombre: number, puissance?: number) => {
@@ -41,14 +48,20 @@ const exercice = () => {
 
   displayText(`${callback(4, 5)}`)
   //creation de la fonction carre
-  let carre: (nbr: number) => number
-  carre = (nbr: number) => nbr * nbr
 
+  function carre(nbr: number) {
+    return nbr * nbr
+  }
+  carre.description = "fonction du carre"
   // creation de la fonction calculExp
-  let calculExp: (cb: (nbr: number) => number, base: number) => number
-  calculExp = (cb: (nbr: number) => number, base: number) => cb(base)
+  let calculExp: (cb: CalculExpFunction, base: number) => number
+  calculExp = (cb: CalculExpFunction, base: number) => cb(base)
 
   displayText(`${calculExp(carre, 5)}`)
+  // la fonction cube
+  let cube: (nbr: number) => number
+  cube = (nbr: number) => nbr * nbr * nbr
+
   /*
 eslint
   @typescript-eslint/no-unused-vars: "off"
