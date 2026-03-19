@@ -103,6 +103,11 @@ const exercice = () => {
     run: Function
   }
 
+  // creation de la fonction doSomeThingWithDrinkers
+  function doSomeThingWithDrinkers(drinker: Drinkable) {
+    drinker.drink()
+  }
+  doSomeThingWithDrinkers(Max)
   /*eslint
   @typescript-eslint/no-unused-vars: "off"
 */
