@@ -94,6 +94,15 @@ const exercice = () => {
   const fish = new Fish("Dago")
   // utilise 'displayText' pour afficher son nom à l'écran
   displayText(`je vous presente ${fish.printName()} mon poisson rouge`)
+
+  //creation de l'interface Mammal
+  // interface Mammal extends Drinkable, Runnable {}
+
+  type Mammal = Animal & {
+    drink: Function
+    run: Function
+  }
+
   /*eslint
   @typescript-eslint/no-unused-vars: "off"
 */
