@@ -67,9 +67,18 @@ const exercice = () => {
   }
 
   // 🐶 Créé une interface 'Swimable' contenant la fonction 'swim()'
-
+  interface Swimable {
+    swim: () => void
+  }
   // 🐶 adapte la classe Fish en étantdant 'annimal' et implementant 'Swimable'
-  class Fish {}
+  class Fish extends Animal implements Swimable {
+    constructor(name: string) {
+      super(name, 0, true)
+    }
+    swim() {
+      console.log("Je nage !!!!")
+    }
+  }
 
   const tigrou = new Cat("Tigrou")
   tigrou.run()
@@ -77,11 +86,14 @@ const exercice = () => {
   displayText(`Nom du chat ${tigrou.printName()}`)
 
   // 🐶 Créé une instance de Dog et appelle les fonctions 'run' et 'drink'
-  // utilise 'displayText' pour afficher son nom à l'écran
+  const Max = new Dog("Max")
 
+  // utilise 'displayText' pour afficher son nom à l'écran
+  displayText(` Bonjour mon Chien ${Max.printName()}`)
   // 🐶 Créé une instance de Fish et appelle la fonction 'swim'
+  const fish = new Fish("Dago")
   // utilise 'displayText' pour afficher son nom à l'écran
-
+  displayText(`je vous presente ${fish.printName()} mon poisson rouge`)
   /*eslint
   @typescript-eslint/no-unused-vars: "off"
 */
